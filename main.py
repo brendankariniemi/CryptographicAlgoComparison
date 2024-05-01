@@ -20,5 +20,5 @@ for file in files:
 
 # The results list can then be processed further or saved to a file.
 df = pd.DataFrame(results, columns=['File Path', 'File Size (bytes)', 'Algorithm', 'CPU Usage (sec)', 'Memory Usage (bytes)'])
-with pd.ExcelWriter('results2.xlsx', engine='openpyxl', mode='a') as writer:
+with pd.ExcelWriter('results.xlsx', engine='openpyxl', mode='a') as writer:
     df.to_excel(writer, sheet_name='Sheet3', index=False)
